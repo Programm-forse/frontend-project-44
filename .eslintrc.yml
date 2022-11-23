@@ -1,16 +1,18 @@
 ---
 
 plugins:
-  # https://github.com/jest-community/eslint-plugin-jest
-  - jest
-
+  - import
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
   node: true
 
 extends:
   - 'airbnb-base'
-  - 'plugin:jest/recommended'
+  - eslint:recommended
+  - plugin:import/recommended
+  # alternatively, 'recommended' is the combination of these two rule sets:
+  - plugin:import/errors
+  - plugin:import/warnings
 
 parserOptions:
   ecmaVersion: latest
@@ -22,3 +24,12 @@ rules:
     - ignorePackages
     - js: always
   no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  import/no-unresolved: [2, {commonjs: true, amd: true}]
+  import/named: 2
+  import/namespace: 2
+  import/default: 2
+  import/export: 2
+
+
+
+
