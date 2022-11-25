@@ -1,19 +1,21 @@
 import readlineSync from 'readline-sync';
+import { welcomeGames } from './index.js';
+// general logic welcome step
 
-const getUserName = () => {
-  const userName = readlineSync.question('May I have you name? ');
-  return userName;
-};
+// const getUserName = () => {
+//   const userName = readlineSync.question('May I have you name? ');
+//   return userName;
+// };
 
-const printGreetingStart = () => {
-  console.log('Welcome to the Brain Games!');
-  // const greeting = `Hi ${name}!`;
-  return 0;
-};
-const printGreetingName = (name) => {
-  console.log(`Hi, ${name}!`);
-  return 0;
-}
+// const printGreetingStart = () => {
+//   console.log('Welcome to the Brain Games!');
+//   // const greeting = `Hi ${name}!`;
+//   return 0;
+// };
+// const printGreetingName = (name) => {
+//   console.log(`Hi, ${name}!`);
+//   return 0;
+// };
 // printGreeting();
 
 const gameRules = () => {
@@ -55,11 +57,9 @@ const isRigthAswer = (answer, even) => {
 // console.log(rigthAswer());
 
 const game = () => {
-  printGreetingStart();
-  const name = getUserName();
-  printGreetingName(name);
+  const userName = welcomeGames();
   gameRules();
-  const win = `Congratulations, ${name}!`;
+  const win = `Congratulations, ${userName}!`;
   for (let i = 0; i < 3; i += 1) {
     const num = generateRandomNumber();
     askQuestion(num);
@@ -68,7 +68,7 @@ const game = () => {
     if (isRigthAswer(answer, even) === true) {
       console.log('Correct!');
     } else {
-      return (console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\n Let's try again, ${name}!`));
+      return (console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\n Let's try again, ${userName}!`));
     }
   }
   return console.log(win);
