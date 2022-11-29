@@ -45,7 +45,7 @@ const game = () => {
     const number1 = generateRandomNumber(10);
     const number2 = generateRandomNumber(10);
     const sign = getSign();
-    console.log(getExpr(sign, number1, number2));
+    console.log(`Question: ${getExpr(sign, number1, number2)}`);
     const answer = getUserAnswer();
     const calc = getCalc(sign, number1, number2).toString();
     if (isRigthAswer(answer, calc) === true) {
