@@ -12,7 +12,7 @@ const printGreetingStart = () => {
 };
 
 const printGreetingName = (userName) => {
-  console.log(`Hi, ${userName}!`);
+  console.log(`Hello, ${userName}!`);
   return 0;
 };
 
