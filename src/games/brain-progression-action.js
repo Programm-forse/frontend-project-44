@@ -45,7 +45,7 @@ const game = () => {
     const stepProg = getStepProgression();
     // console.log(randLen, randStart, stepProg);
     const res = getArithmeticProgression(randLen, randStart, stepProg);
-    console.log(`Question: ${res[1]}`);
+    console.log(`Question: ${res[1].toString()}`);
     const correctAnswer = res[0].toString();
     const answer = getUserAnswer();
     if (isRigthAswer(answer, correctAnswer) === true) {
