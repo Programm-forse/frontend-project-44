@@ -37,7 +37,7 @@ const game = () => {
     if (isRigthAswer(answer, correctAnswer) === true) {
       console.log('Correct!');
     } else {
-      return (console.log(`You '${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n Let's try again, ${userName}!`));
+      return (console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n Let's try again, ${userName}!`));
     }
   }
   const win = `Congratulations, ${userName}!`;
