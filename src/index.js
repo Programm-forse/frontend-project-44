@@ -25,7 +25,7 @@ export const welcomeGames = () => {
 
 // welcomeGames();
 export const getUserAnswer = () => {
-  const userAnswer = readlineSync.question('You answer: ');
+  const userAnswer = readlineSync.question('Your answer: ');
   return userAnswer;
 };
 
