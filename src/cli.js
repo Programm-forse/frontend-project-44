@@ -6,7 +6,7 @@ export const welcome = () => {
 };
 
 const greeting = () => {
-  const userName = readlineSync.question('May I heve you name? ');
+  const userName = readlineSync.question('May I have you name? ');
   return console.log(`Hi, ${userName}!`);
 };
 
