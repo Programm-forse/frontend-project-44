@@ -29,8 +29,8 @@ const game = () => {
   const userName = welcomeGames();
   gameRules();
   for (let i = 0; i < 3; i += 1) {
-    const number1 = generateRandomNumber(10);
-    const number2 = generateRandomNumber(10);
+    const number1 = generateRandomNumber(10) + 1;
+    const number2 = generateRandomNumber(10) + 1;
     console.log(`Question: ${number1} ${number2}`);
     const correctAnswer = result(number1, number2);
     const answer = getUserAnswer();
