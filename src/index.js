@@ -29,8 +29,8 @@ export const getUserAnswer = () => {
   return userAnswer;
 };
 
-export const isRigthAswer = (answer, even) => {
-  if (answer === even) {
+export const isRigthAswer = (answer, result) => {
+  if (answer === result) {
     return true;
   }
   return false;
